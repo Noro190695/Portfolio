@@ -1,0 +1,710 @@
+@import "./imports";
+
+* {
+  @include Default_Style;
+}
+body {
+  width: calc(100vw - 15px);
+  min-height: 100vh;
+  overflow-x: hidden;
+  
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $Turquoise3;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, $SkyBlue4, $Black);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $DarkSlateGray;
+  }
+}
+
+/*------------------------ Main Container start -----------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+/*------------------------ Main Container end-----------------------*/
+
+/*------------------------ Header start-----------------------*/
+header {
+  display: flex;
+  background: $Black;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding: 0px 20px;
+
+  .header_container {
+    display: flex;
+    align-items: center;
+    height: inherit;
+
+    a {
+      display: flex;
+      height: inherit;
+      align-items: center;
+
+      .header_logo {
+        padding-right: 10px;
+
+        img {
+          height: 100%;
+        }
+      }
+      .header_title {
+        h1 {
+          color: $DarkSlateGray;
+          &:hover {
+            color: $DimGrey;
+          }
+        }
+      }
+    }
+
+    .header_contact {
+      overflow: hidden;
+      padding: 0px 50px;
+
+      p {
+        color: $DarkSlateGray;
+        animation: header_contact_animation 10s linear infinite backwards;
+      }
+    }
+  }
+}
+/*------------------------ Header end-----------------------*/
+
+/*------------------------ .button_gradient_border start-----------------------*/
+
+.button_gradient_border {
+  position: relative;
+  display: flex;
+  transition: 1s;
+  
+
+  li {
+    padding: 2px;
+    margin: 0px 5px;
+    background: linear-gradient(45deg, $DarkSlateGray, $Turquoise1);
+    border-radius: 15px;
+
+    a {
+      border-radius: 15px;
+      padding: 5px 10px;
+      color: $DarkSlateGray;
+      transition: 0.3s;
+    }
+    &:hover a {
+      font-size: $Size4;
+      box-shadow: 0px 0px 20px $SkyBlue4;
+    }
+  }
+  .header_button {
+    background-color: $Black;
+  }
+  .burger {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: -60px;
+    top: 20px;
+    transition: 0.3s;
+    display: none;
+    cursor: pointer;
+    z-index: 50;
+
+    &:hover {
+      box-shadow: 0px 0px 5px $White;
+    }
+
+    img {
+      height: 100%;
+      height: 100%;
+      
+    }
+  }
+}
+
+/*------------------------ .button_gradient_border end-----------------------*/
+/*------------------------ contacts start-----------------------*/
+.contacts {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 125px);
+  background-color: $DimGrey;
+  z-index: 10;
+  transition: .5s;
+ 
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 60%;
+    background-color: $DimGrey;
+    left: -5px;
+    top: 20%;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 60%;
+    background-color: $DimGrey;
+    right: -5px;
+    top: 20%;
+  }
+  &_button{
+    
+    border: 20px solid transparent;
+    border-left: 20px solid $DimGrey;
+    position: absolute;
+    right: -50px;
+    z-index: 100;
+
+    
+  }
+
+  .line {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 150%;
+    background-color: $Turquoise4;
+    animation: contactLine 1s linear infinite alternate;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 11px solid transparent;
+      border-top: 20px solid $Turquoise4;
+      left: -10px;
+      top: -10px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 11px solid transparent;
+      border-bottom: 20px solid $Turquoise4;
+      left: -10px;
+      bottom: -10px;
+    }
+  }
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: $Black;
+      border: 2px solid $Turquoise4;
+      transition: 0.3s;
+      &:hover {
+        border: 2px solid $Green;
+      }
+
+      a {
+        width: 90%;
+        height: 90%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+/*------------------------ contacts end-----------------------*/
+/*------------------------ conteiner start-----------------------*/
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba($color: $Black, $alpha: 0.8);
+
+  .container_title {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 40%;
+      position: absolute;
+      left: 0;
+      background: linear-gradient(45deg, $DarkSlateGray, $Turquoise1);
+    }
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 40%;
+      position: absolute;
+      right: 0;
+      background: linear-gradient(45deg, $Turquoise1, $DarkSlateGray);
+    }
+
+    > h2 {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(45deg, $Turquoise1, $DarkSlateGray);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      z-index: 1;
+      padding: 10px 0px;
+      border: 2px solid $DarkSlateGray;
+    }
+  }
+}
+/*------------------------ conteiner end-----------------------*/
+
+/*------------------------ .background start-----------------------*/
+.background {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: $Black;
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+/*------------------------ .background end-----------------------*/
+/*------------------------ .navigation card end-----------------------*/
+.navigation_card {
+  position: fixed;
+  width: 30px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  .parent {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $Turquoise4;
+    background-color: $DimGrey;
+    border-radius: 50%;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .child {
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: $Turquoise1;
+      border-radius: 50%;
+      position: relative;
+      opacity: 0;
+    }
+    .radio_active {
+      opacity: 1;
+    }
+  }
+  .radio_line {
+    width: 2px;
+    height: 50%;
+    background-color: $Turquoise4;
+    position: absolute;
+    z-index: -1;
+    animation: radioLine 1s linear infinite alternate;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 11px solid transparent;
+      border-bottom: 20px solid $Turquoise4;
+      left: -10px;
+      top: -20px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 11px solid transparent;
+      border-top: 20px solid $Turquoise4;
+      left: -10px;
+      bottom: -20px;
+    }
+  }
+}
+/*------------------------ .navigation card end-----------------------*/
+/*------------------------ footer start-----------------------*/
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: $Black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+
+  span {
+    font-size: $Size5;
+    color: $DarkSlateGray;
+  }
+
+  .footer_links {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+
+      li {
+        
+        a {
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: inherit;
+            height: inherit;
+            transition: 0.3s;
+
+            &:hover {
+              box-shadow: 0px 0px 5px $SkyBlue4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*------------------------ footer end-----------------------*/
+
+/*------------------------ about start-----------------------*/
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .about_content {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .full_stack {
+      
+      display: flex;
+      background: linear-gradient(45deg, $DarkSlateGray -10%, $Turquoise1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .personal_information {
+      width: 100%;
+      padding: 10px 0px;
+      display: flex;
+      transform: translateY(150%);
+      transition: 1.5s;
+      position: relative;
+      border-bottom: 3px solid $Turquoise4;
+
+      .my_img {
+        padding: 3px;
+        background: linear-gradient(45deg, $Blue -10%, $Green);
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .personal_data {
+        padding-left: 20px;
+       
+
+        .my_full_name {
+          > h2 {
+            color: $DarkSlateGray;
+            border-bottom: 1px solid $DarkSlateGray;
+          }
+        }
+        .about_me {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          > div {
+            display: flex;
+            align-items: center;
+
+            h3 {
+              color: $LightSlateGray;
+              padding: 5px 5px 5px 0px;
+            }
+            span {
+              color: $LightGray;
+            }
+          }
+          > h2 {
+            color: $Turquoise4;
+            padding: 15px 0;
+          }
+        }
+      }
+
+      .my_contact {
+        position: absolute;
+        height: 50px;
+        right: 0;
+      
+        display: flex;
+        align-items: center;
+        span {
+          color: $Turquoise1;
+          margin: 0px 2px;
+        }
+        .viber,
+        .whatsapp {
+
+          font-weight: bold;
+        }
+
+      }
+    }
+  }
+}
+/*------------------------ about end-----------------------*/
+
+/*------------------------ skils start-----------------------*/
+
+.skils {
+  width: 80%;
+  height: 100%;
+  display: flex;
+
+  &_container {
+    display: flex;
+    width: 50%;
+    height: 95%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0px 20px;
+
+    &:first-child {
+      border-right: 1px solid $DarkSlateGray;
+    }
+    &:last-child {
+      border-left: 1px solid $DarkSlateGray;
+    }
+
+    > h2 {
+      width: 100%;
+      height: 10%;
+      align-items: flex-start;
+      display: flex;
+      justify-content: s;
+      color: $DarkSlateGray;
+    }
+    .front_end,
+    .back_end {
+      width: 100%;
+      height: 90%;
+      display: flex;
+      justify-content: space-between;
+      transition: 1s;
+    }
+    .front_end {
+      transform: translateX(-150%);
+    }
+    .back_end {
+      transform: translateX(150%);
+    }
+
+    .skils_progress {
+      width: 50px;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .skils_name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        border: 2px solid $DarkSlateGray;
+        span {
+
+          color: $Turquoise1;
+        }
+        &::after {
+          content: "";
+          display: block;
+          border: 10px solid transparent;
+          border-left: 10px solid $DarkSlateGray;
+          position: absolute;
+          right: -20px;
+        }
+      }
+      .skils_border {
+        width: 41%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        border: 2px solid $LightSlateGray;
+      }
+      &_bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 80%;
+        background: linear-gradient(45deg, $DarkSlateGray, $Turquoise1);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        .skils_progress_value {
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          background: $Silverblack;
+          color: $Turquoise1;
+          transform: rotate(90deg);
+          z-index: 1;
+          position: absolute;
+          transition: 1s;
+        }
+      }
+    }
+    .back_end {
+      .skils_progress_bg {
+        background: linear-gradient(45deg, $Silverblack, $Turquoise4);
+      }
+    }
+  }
+}
+
+/*------------------------ skils end-----------------------*/
+
+/*------------------------ Portfolio start-----------------------*/
+.project {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  padding: 20px 0px;
+
+  &_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .project_title_link {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid $DarkSlateGray;
+
+      h2 {
+        color: $Turquoise1;
+      }
+      a {
+        display: flex;
+        height: 60%;
+        align-items: center;
+        justify-content: space-around;
+        color: $Turquoise1;
+        font-size: $Size6;
+        border: 1px solid $Turquoise1;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: $Turquoise1;
+          transform: translateX(-100%);
+          transition: transform 0.5s;
+        }
+        &:hover::before {
+          transform: translateX(0%);
+        }
+        &:hover > p {
+          color: $DarkSlateGray;
+        }
+      }
+      p {
+        color: $Turquoise1;
+        font-size: $Size6;
+        z-index: 1;
+      }
+      img {
+        height: 80%;
+        z-index: 1;
+      }
+    }
+    .project_img {
+      width: 100%;
+      height: 85%;
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        margin: 0.5%;
+        width: 49%;
+        height: 49%;
+      }
+    }
+  }
+}
+/*------------------------ portfolio end-----------------------*/

@@ -1,0 +1,512 @@
+/* COLORS */
+/* COLORS */
+/*---------------------------------------------------------------*/
+/* SIZE TEXT*/
+/* SIZE TEXT*/
+/*---------------------------------------------------------------*/
+@-webkit-keyframes header_contact_animation {
+  0% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+@keyframes header_contact_animation {
+  0% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes contactLine {
+  0% {
+    height: 150%;
+  }
+  100% {
+    height: calc(100% + 21px);
+    background-color: #2F4F4F;
+  }
+}
+
+@keyframes contactLine {
+  0% {
+    height: 150%;
+  }
+  100% {
+    height: calc(100% + 21px);
+    background-color: #2F4F4F;
+  }
+}
+
+@-webkit-keyframes radioLine {
+  0% {
+    height: 50%;
+  }
+  100% {
+    height: 35%;
+  }
+}
+
+@keyframes radioLine {
+  0% {
+    height: 50%;
+  }
+  100% {
+    height: 35%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts {
+    left: 10px;
+    width: 60px;
+    height: 300px;
+    left: 10px;
+    border: 5px solid #00868B;
+  }
+  .contacts_button {
+    display: none;
+  }
+  header .header_logo {
+    height: 70%;
+  }
+  header .header_title {
+    font-size: 18px;
+  }
+  header .header_contact p {
+    font-size: 16px;
+  }
+  .personal_information {
+    position: relative;
+  }
+  .personal_information .my_full_name > h2 {
+    font-size: 40px;
+  }
+  .personal_information .about_me span {
+    font-size: 16px;
+  }
+  .personal_information .my_contact {
+    right: 0;
+    bottom: 0;
+  }
+  .personal_information .my_contact .viber,
+  .personal_information .my_contact .whatsapp {
+    font-size: 20px;
+  }
+  .personal_information .my_contact .number_phone {
+    font-size: 16px;
+  }
+  .full_stack {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px;
+    font-size: 36px;
+  }
+  .my_img {
+    width: 40%;
+    height: 100%;
+  }
+  .skils_name span {
+    font-size: 20px;
+  }
+  footer ul {
+    width: 200px;
+  }
+  footer ul li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts::before {
+    display: none;
+  }
+  .contacts::after {
+    display: none;
+  }
+  .contacts_button {
+    display: none;
+  }
+  header .header_logo {
+    height: 50%;
+  }
+  header .header_title {
+    font-size: 14px;
+  }
+  header .header_contact p {
+    font-size: 14px;
+  }
+  header .personal_data {
+    width: 70%;
+    height: 100%;
+  }
+  .button_gradient_border {
+    z-index: 10;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    padding: 50px;
+    right: -225px;
+    top: 0px;
+    background-color: #000000;
+  }
+  .button_gradient_border li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 150px;
+    height: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px;
+  }
+  .button_gradient_border li a {
+    width: 100%;
+    height: 100%;
+  }
+  .button_gradient_border .burger {
+    display: block;
+  }
+  .container_title h2 {
+    font-size: 20px;
+  }
+  .full_stack {
+    font-size: 24px;
+  }
+  .personal_information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .personal_information .my_img {
+    width: 100%;
+    height: 100%;
+  }
+  .personal_information .personal_data {
+    width: 100%;
+  }
+  .skils {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skils_container {
+    width: 100%;
+    height: 50%;
+    padding: 50px 0px;
+  }
+  .skils_container:first-child {
+    border-right: 1px solid transparent;
+  }
+  .skils_container:last-child {
+    border-left: 1px solid transparent;
+  }
+  .skils_container h2 {
+    border-bottom: 2px solid #2F4F4F;
+  }
+  .skils_container .front_end,
+  .skils_container .back_end {
+    padding: 20px 0;
+  }
+  .project .project_title_link h2 {
+    font-size: 22px;
+  }
+  .project .project_title_link a {
+    height: 40%;
+    padding: 0px 10px;
+  }
+  .project .project_img {
+    width: 100%;
+    height: 85%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project .project_img img {
+    margin: 0px 0.5%;
+    width: 49%;
+    height: 40%;
+  }
+  .navigation_card {
+    right: 10px;
+    z-index: 1;
+  }
+  ul {
+    width: 200px;
+  }
+  ul li {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .header_logo {
+    height: 40%;
+  }
+  header .header_title {
+    font-size: 12px;
+  }
+  header .header_contact p {
+    font-size: 12px;
+  }
+  header .personal_data {
+    width: 70%;
+    height: 100%;
+  }
+  .full_stack {
+    font-size: 20px;
+  }
+  .personal_information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .personal_information .my_img {
+    width: 60%;
+  }
+  .personal_information .personal_data {
+    width: 100%;
+  }
+  .skils {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skils_container {
+    width: 100%;
+    height: 50%;
+    padding: 50px 0px;
+  }
+  .skils_container:first-child {
+    border-right: 1px solid transparent;
+  }
+  .skils_container:last-child {
+    border-left: 1px solid transparent;
+  }
+  .skils_container h2 {
+    border-bottom: 2px solid #2F4F4F;
+  }
+  .skils_container .front_end,
+  .skils_container .back_end {
+    padding: 20px 0;
+  }
+  .skils .skils_name span {
+    font-size: 16px;
+  }
+  .project .project_title_link h2 {
+    font-size: 22px;
+  }
+  .project .project_title_link a {
+    height: 40%;
+    padding: 0px 10px;
+  }
+  .project .project_img {
+    width: 100%;
+    height: 85%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project .project_img img {
+    margin: 0px 0.5%;
+    width: 49%;
+    height: 40%;
+  }
+  .navigation_card {
+    right: 10px;
+  }
+  footer span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation_card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navigation_card .radio_line {
+    display: none;
+  }
+  .contacts {
+    left: -40px;
+    width: 30px;
+    height: 210px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts_button {
+    display: block;
+  }
+  header .header_logo {
+    height: 30%;
+  }
+  header .header_title {
+    font-size: 10px;
+  }
+  header .header_contact {
+    display: none;
+  }
+  header .personal_data {
+    width: 70%;
+    height: 100%;
+  }
+  .container_title h2 {
+    font-size: 10px;
+  }
+  .full_stack {
+    height: 50px;
+    font-size: 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .personal_information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .personal_information .my_img {
+    width: 50%;
+  }
+  .personal_information .personal_data {
+    width: 100%;
+  }
+  .personal_information .my_full_name > h2 {
+    font-size: 24px;
+  }
+  .personal_information .about_me h2 {
+    font-size: 14px;
+  }
+  .personal_information .about_me h3 {
+    font-size: 14px;
+  }
+  .personal_information .about_me span {
+    font-size: 12px;
+  }
+  .personal_information .my_contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    bottom: 5px;
+  }
+  .personal_information .my_contact .viber,
+  .personal_information .my_contact .whatsapp {
+    font-size: 12px;
+  }
+  .personal_information .my_contact .number_phone {
+    font-size: 10px;
+  }
+  .skils {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skils_container {
+    width: 100%;
+    height: 50%;
+    padding: 0px;
+  }
+  .skils_container .skils_progress {
+    width: 30px;
+  }
+  .skils_container:first-child {
+    border-right: 1px solid transparent;
+  }
+  .skils_container:last-child {
+    border-left: 1px solid transparent;
+  }
+  .skils_container h2 {
+    border-bottom: 2px solid #2F4F4F;
+  }
+  .skils_container .front_end,
+  .skils_container .back_end {
+    padding: 50px 0;
+  }
+  .skils .skils_name span {
+    font-size: 10px;
+  }
+  .skils .skils_progress_value {
+    font-size: 10px;
+  }
+  .project .project_title_link h2 {
+    font-size: 10px;
+  }
+  .project .project_title_link a {
+    height: 40%;
+    width: 35%;
+  }
+  .project .project_title_link p {
+    font-size: 8px;
+  }
+  .project .project_title_link img {
+    padding-left: 5px;
+  }
+  .project .project_img {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project .project_img img {
+    margin: 0px 0.5%;
+    width: 100%;
+    height: 22%;
+    margin: 1% 0;
+  }
+  .navigation_card {
+    right: 10px;
+  }
+  footer span {
+    font-size: 10px;
+  }
+  footer .footer_title {
+    display: none;
+  }
+  footer ul {
+    width: 100px;
+  }
+  footer ul li {
+    width: 15px;
+    height: 15px;
+  }
+}
+/*# sourceMappingURL=media.css.map */
