@@ -1,5 +1,22 @@
 @import "./imports";
 @media (min-width: 1024px) {
+  body {
+    width: calc(100vw - 15px);
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: $Turquoise3;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(to top, $SkyBlue4, $Black);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $DarkSlateGray;
+    }
+  }
   
   .contacts {
     left: 10px;
@@ -213,7 +230,7 @@
   
 }
 @media (max-width: 768px) {
-  
+ 
   header {
     .header_logo {
       height: 40%;
@@ -306,6 +323,13 @@
   }
 }
 @media (max-width: 500px) {
+  body {
+    width:100vw;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  
+  }
   .big_img{
     display: none;
   }

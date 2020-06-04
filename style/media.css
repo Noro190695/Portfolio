@@ -64,6 +64,22 @@
 }
 
 @media (min-width: 1024px) {
+  body {
+    width: calc(100vw - 15px);
+  }
+  body::-webkit-scrollbar {
+    width: 15px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: #909494;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: -webkit-gradient(linear, left bottom, left top, from(#4a708b), to(#000000));
+    background: linear-gradient(to top, #4a708b, #000000);
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: #2f4f4f;
+  }
   .contacts {
     left: 10px;
     width: 60px;
@@ -349,6 +365,12 @@
 }
 
 @media (max-width: 500px) {
+  body {
+    width: 100vw;
+  }
+  body::-webkit-scrollbar {
+    width: 0px;
+  }
   .big_img {
     display: none;
   }

@@ -75,26 +75,8 @@
 }
 
 body {
-  width: calc(100vw - 15px);
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-body::-webkit-scrollbar {
-  width: 15px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #909494;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left bottom, left top, from(#4a708b), to(#000000));
-  background: linear-gradient(to top, #4a708b, #000000);
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #2f4f4f;
 }
 
 /*------------------------ Main Container start -----------------------*/
@@ -1086,8 +1068,8 @@ footer .footer_links ul li a img:hover {
   background: rgba(0, 0, 0, 0.8);
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .sertificate_img:hover::before {
