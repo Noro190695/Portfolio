@@ -7,7 +7,6 @@ body {
   width: calc(100vw - 15px);
   min-height: 100vh;
   overflow-x: hidden;
-  
 
   &::-webkit-scrollbar {
     width: 15px;
@@ -90,7 +89,6 @@ header {
   position: relative;
   display: flex;
   transition: 1s;
-  
 
   li {
     padding: 2px;
@@ -132,7 +130,6 @@ header {
     img {
       height: 100%;
       height: 100%;
-      
     }
   }
 }
@@ -147,8 +144,7 @@ header {
   top: calc(50% - 125px);
   background-color: $DimGrey;
   z-index: 10;
-  transition: .5s;
- 
+  transition: 0.5s;
 
   &::before {
     content: "";
@@ -170,15 +166,12 @@ header {
     right: -5px;
     top: 20%;
   }
-  &_button{
-    
+  &_button {
     border: 20px solid transparent;
     border-left: 20px solid $DimGrey;
     position: absolute;
     right: -50px;
     z-index: 100;
-
-    
   }
 
   .line {
@@ -216,7 +209,6 @@ header {
     justify-content: space-around;
     align-items: center;
     z-index: 1;
-    
 
     li {
       display: flex;
@@ -392,10 +384,8 @@ footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
 
       li {
-        
         a {
           width: 100%;
           height: 100%;
@@ -433,7 +423,6 @@ footer {
     overflow: hidden;
 
     .full_stack {
-      
       display: flex;
       background: linear-gradient(45deg, $DarkSlateGray -10%, $Turquoise1);
       -webkit-background-clip: text;
@@ -459,7 +448,6 @@ footer {
       }
       .personal_data {
         padding-left: 20px;
-       
 
         .my_full_name {
           > h2 {
@@ -495,7 +483,7 @@ footer {
         position: absolute;
         height: 50px;
         right: 0;
-      
+
         display: flex;
         align-items: center;
         span {
@@ -504,10 +492,8 @@ footer {
         }
         .viber,
         .whatsapp {
-
           font-weight: bold;
         }
-
       }
     }
   }
@@ -573,7 +559,6 @@ footer {
         position: relative;
         border: 2px solid $DarkSlateGray;
         span {
-
           color: $Turquoise1;
         }
         &::after {
@@ -711,7 +696,7 @@ footer {
 
 /*------------------------ sertificate start-----------------------*/
 
-.sertificate{
+.sertificate {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -720,27 +705,30 @@ footer {
   overflow-y: auto;
   padding: 30px 0px;
   position: relative;
-  .big_img{
+ 
+  .big_img {
     width: 100%;
     height: 100%;
     position: absolute;
     transform: scale(0);
     align-items: center;
     justify-content: center;
-    background: rgba($color: $Black, $alpha: .8);
-    transition: .5s;
-    img{
+    background: rgba($color: $Black, $alpha: 0.8);
+    transition: 0.5s;
+    z-index: 1;
+    img {
       width: 80%;
       height: 100%;
+      
     }
-    .close{
+    .close {
       position: absolute;
       top: 0;
       right: 0;
       cursor: pointer;
-      transition: .3s;
-      &:hover{
-        background: rgba($color: $White, $alpha: .2);
+      transition: 0.3s;
+      &:hover {
+        background: rgba($color: $White, $alpha: 0.2);
       }
     }
   }
@@ -748,13 +736,39 @@ footer {
   &::-webkit-scrollbar {
     width: 0px;
   }
-
-
-  img{
+  &_img{
     width: 300px;
     height: 300px;
     margin: 5px;
+    cursor: pointer;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+        
+    }
+    &::before {
+      content: "+";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      font-size: 100px;
+      font-weight: bold;
+      color: $White;
+      background: rgba($color: $Black, $alpha: 0.8);
+      transform: scale(0);
+      transition: .3s;
+      
+
+    }
+    &:hover::before{
+      transform: scale(1);
+    }
   }
+  
 }
 /*------------------------ sertificate end-----------------------*/
-

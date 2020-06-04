@@ -194,7 +194,7 @@ window.addEventListener("load", () => {
     }
     function show_modal() {
       let modal = document.querySelector('.big_img');
-      modal.children[1].src = this.src;
+      modal.children[1].src = this.children[0].src;
       modal.style= 'transform: scale(1);';
       modal.children[0].addEventListener('click', () => {
         modal.style= 'transform: scale(0);';
@@ -205,7 +205,7 @@ window.addEventListener("load", () => {
     
   }
 
-  modal_img('.sertificate > img')
+  modal_img('.sertificate_img')
     
   
 });
