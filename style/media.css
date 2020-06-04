@@ -124,6 +124,11 @@
     width: 30px;
     height: 30px;
   }
+  .big_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -344,6 +349,9 @@
 }
 
 @media (max-width: 500px) {
+  .big_img {
+    display: none;
+  }
   .navigation_card {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
