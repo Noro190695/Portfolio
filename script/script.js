@@ -71,8 +71,7 @@ window.addEventListener("load", () => {
   function auto_write_text(selector) {
     selector = document.querySelector(selector);
     let text = "{Heloo, I'm Full Stack Javascript Php Developer...}";
-    let audio = document.querySelector('audio')
-    audio.play()
+
     let textArr = text.split("");
     
     let interval = setInterval(() => {
@@ -81,8 +80,6 @@ window.addEventListener("load", () => {
         selector.innerHTML += textArr.shift();
 
       } else {
-        audio.pause()
-        audio.currentTime = 0;
         clearInterval(interval);
         
       }
@@ -188,6 +185,27 @@ window.addEventListener("load", () => {
     })
   }
   Contacts('.contacts','.contacts_button')
+
+  function modal_img(selector){
+    selector = document.querySelectorAll(selector)
+    for (const img of selector) {
+        img.addEventListener('click', show_modal)
+        
+    }
+    function show_modal() {
+      let modal = document.querySelector('.big_img');
+      modal.children[1].src = this.src;
+      modal.style= 'transform: scale(1);';
+      modal.children[0].addEventListener('click', () => {
+        modal.style= 'transform: scale(0);';
+      })
+      
+      
+    }
+    
+  }
+
+  modal_img('.sertificate > img')
     
   
 });

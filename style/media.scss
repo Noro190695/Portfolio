@@ -1,5 +1,6 @@
 @import "./imports";
 @media (min-width: 1024px) {
+  
   .contacts {
     left: 10px;
     width: 60px;
@@ -70,6 +71,9 @@
         height: 30px;
       }
     }
+  }
+  .big_img{
+    display: flex;
   }
 }
 @media (max-width: 1024px) {
@@ -302,6 +306,9 @@
   }
 }
 @media (max-width: 500px) {
+  .big_img{
+    display: none;
+  }
   .navigation_card {
     justify-content: center;
     .radio_line {
